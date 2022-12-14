@@ -21,5 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("rest_framework.urls", namespace="api")),
-    path("api/speakers/", include("speaches.urls", namespace="speaches")),
+    path("api/", include("speeches.urls", namespace="speeches")),
 ] + static(prefix="uploads", document_root=settings.MEDIA_ROOT)
