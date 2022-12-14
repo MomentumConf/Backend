@@ -1,0 +1,6 @@
+.code
+*.iml
+__pycache__
+*.pyo
+*.sqlite3
+src/uploads/
