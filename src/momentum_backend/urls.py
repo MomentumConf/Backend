@@ -18,8 +18,11 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+admin.site.site_header = "Panel zarządzania Momentum"
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("rest_framework.urls", namespace="api")),
     path("api/", include("speeches.urls", namespace="speeches")),
+    path("api/songs/", include("songs.urls", namespace="songs")),
 ] + static(prefix="uploads", document_root=settings.MEDIA_ROOT)
