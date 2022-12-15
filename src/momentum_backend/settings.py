@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # 3rd party
     "rest_framework",
+    "markdownfield",
+
+    # Own
     "speeches",
     "songs",
 ]
