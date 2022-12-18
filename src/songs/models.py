@@ -7,8 +7,8 @@ class Song(models.Model):
         ordering = ["order"]
 
     title = models.CharField(max_length=255)
-    original_title = models.CharField(max_length=255)
+    original_title = models.CharField(max_length=255, blank=True, null=True)
     author = models.CharField(max_length=255)
     lyrics = MarkdownField(rendered_field="rendered_lyrics")
     rendered_lyrics = RenderedMarkdownField()
-    order = models.PositiveSmallIntegerField(default=1)
+    order = models.PositiveSmallIntegerField(default=0, db_index=True)
