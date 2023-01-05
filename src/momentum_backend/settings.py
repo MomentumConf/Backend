@@ -73,6 +73,7 @@ INSTALLED_APPS = [
     # Own
     "speeches",
     "songs",
+    "notifications",
 ]
 
 MIDDLEWARE = [

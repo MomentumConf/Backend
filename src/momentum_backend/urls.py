@@ -24,5 +24,6 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("rest_framework.urls", namespace="api")),
     path("api/", include("speeches.urls", namespace="speeches")),
+    path("api/", include("notifications.urls", namespace="notifications")),
     path("api/songs/", include("songs.urls", namespace="songs")),
 ] + static(prefix="uploads", document_root=settings.MEDIA_ROOT)
